@@ -13,7 +13,8 @@
         <div class="col-md-4 col-sm-6">
           <h1><%= post["title"] %></h1>
           <% if post.uploaded_image.attached? %>
-            <image src="<%(url_for(post.uploaded_image))%>" class="img-fluid">
+            <image src="<%=(url_for(post.uploaded_image))%>" class="img-fluid">
+            <% post["uploaded_image"]%>
           <% else %>
             image not here
           <% end %>
@@ -22,6 +23,7 @@
         </div>
       <% end %>
   </div>
+ 
 
   <p>
     <a class="btn btn-primary btn-sm" href="/places">Back to All Places</a>
