@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: myplacenotebook_production
+  username: myplacenotebook
+  password: <%= ENV("MYPLACENOTEBOOK_DATABASE_PASSWORD") %>
