@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container md-3 sm-3">
   <h1><%= @place["name"] %></h1>
 
 
@@ -14,7 +14,7 @@
           <h1><%= post["title"] %></h1>
           <p><%= post["posted_on"] %></p>
           <% if post.uploaded_image.attached? %>
-            <image src="<%=(url_for(post.uploaded_image))%>" class="img-fluid">
+            <image src="<%=(url_for(post.uploaded_image))%>"  class="img-fluid img-thumbnail" height="200" >
             <% post["uploaded_image"]%>
           <% else %>
             No Image
